@@ -1,0 +1,297 @@
+//min width 1200px
+@media screen and (min-width: 1200px) {
+
+  //min width 1200px
+}
+
+//min width 992px
+@media screen and (min-width: 992px) {
+  .text-lg-right {
+    text-align: right;
+  }
+  //min width 992px
+}
+
+//min width 768px
+@media screen and (min-width: 768px) {
+
+
+  //min width 768px
+}
+
+//min width 576px
+@media screen and (min-width: 576px) {
+
+  //min width 576px
+}
+
+
+//max width 1450px
+@media screen and (max-width: 1450px) {
+
+  //max width 1450px
+}
+
+//max width 1199px
+@media screen and (max-width: 1199px) {
+
+
+  .nav-item + .nav-item {
+    padding-left: 15px;
+  }
+  .nav-item {
+    padding-right: 15px;
+  }
+
+  //max width 1199px
+}
+
+//max width 991px
+@media screen and (max-width: 991px) {
+
+
+  //29.11.2019
+  /* news page media*/
+
+
+  .download a{
+    padding: 30px 40px;
+  }
+  .news-page-main-rigth{
+    width: 100%;
+    padding: 0;
+  }
+  .news-page-main img{
+    width: 100%;
+    height: 350px;
+  }
+  .news-page-main {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .news-page-main-element{
+    flex-direction: column;
+  }
+  /* end news page media*/
+
+
+
+
+  .prac-slider .main-slider-dots{
+    display: none!important;
+  }
+  .vnutreny-banner-brandCramp{
+    top: 6%;
+  }
+  .nav-logo{
+    padding-top: 13px;
+  }
+  .nav-item + .nav-item{
+    padding-left: 0;
+  }
+
+  .nav-item + .nav-item{
+    margin-top: 20px;
+  }
+  .nav-item + .nav-item::before{
+    position: static;
+  }
+
+  .nav-link{
+    margin-top: 40px;
+    flex-direction: column;
+  }
+  .open {
+    transform: translateX(0)!important;
+  }
+  .main-slider-dots li::after, .main-slider-dots li::before, .main-slider-dots::before {
+    position: static;
+  }
+
+  .menu-header-main {
+    display: block;
+    position: fixed;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    background: rgba(0, 0, 0, 0.9);
+    transform: translateX(-100%);
+    transition: .7s ease-in-out;
+    z-index: 2;
+  }
+  //.header-bottom {
+  //  display: none;
+  //}
+
+  .header-burger {
+    display: block;
+  }
+  .nav-logo {
+    text-align: center;
+  }
+}
+
+//max width 480px
+@media screen and (max-width: 768px) {
+
+
+  //29.11.2019
+  /* news page media*/
+
+
+  .download-main{
+    margin-top: 0;
+  }
+  .news-page-main-element{
+    margin-bottom: 30px;
+  }
+  .news-page-main img{
+    height: 250px;
+  }
+  .praktikum-news{
+    padding-top: 0;
+  }
+  /* end news page media*/
+
+
+
+
+
+
+
+
+
+
+
+  .vnutreny-banner-brandCramp{
+    top: 3%;
+  }
+  .vnutreny-banner-baton-element{
+    margin-top: 0;
+  }
+  .vnutreny-four{
+    padding-bottom: 35px;
+  }
+  .vnutreny-contact-element{
+    font-size: 16px;
+  }
+  .vnutreny-four-main{
+    margin-top: 0;
+    padding: 45px 0;
+  }
+  .pt-3{
+    padding-top: 0;
+  }
+  .aktuell-title{
+    padding-top: 35px;
+  }
+  .prac-main{
+    margin-top: 0;
+    padding-top: 25px;
+    padding-bottom: 35px;
+  }
+  .prac-main-people{
+    width: 100%;
+  }
+  .main-line::after{
+    position: static;
+    content: '';
+  }
+  .main-line::before {
+    position: static;
+  }
+  .footer-logo {
+    text-align: center;
+  }
+
+
+  //max width 480px
+}
+
+
+//max width 575px
+@media screen and (max-width: 575px) {
+
+
+  //29.11.2019
+  /* news page media*/
+
+  .praktikum-news-botton-text{
+    width: 60%;
+    font-size: 16px;
+  }
+  /* end news page media*/
+
+
+
+
+
+
+
+
+
+  .slick-track{
+    height: 200px;
+  }
+  .prac-vnutreny-desc{
+    width: 170px;
+  }
+  .contactus{
+    margin-top: 30px;
+  }
+  .vnutreny-contact{
+    padding: 25px 0;
+  }
+  .practicum-main{
+    padding-bottom: 35px;
+  }
+  .footer-top{
+    padding-top: 35px;
+    padding-bottom: 40px;
+  }
+
+  .aktuell-left-element-img img,.aktuell-left-element-txt{
+    width: 100%;
+    order:2;
+  }
+  .aktuell-left-element-img{
+    order: 1;
+  }
+  .aktuell-left-element{
+    flex-direction: column;
+  }
+
+  .footer-satsial {
+    justify-content: space-around;
+  }
+  .footer-sosgroup {
+    text-align: center;
+  }
+  .footer-top {
+    text-align: center;
+  }
+
+  //max width 575px
+}
+
+//max width 480px
+@media screen and (max-width: 480px) {
+
+  .vnutreny-banner img{
+    height: 180px;
+  }
+  .slider-title{
+    font-size: 16px;
+  }
+  .vnutreny-banner-brandCramp{
+    right: 10%;
+  }
+  .prac-vnutreny-desc{
+    width: 140px;
+  }
+
+  //max width 480px
+}

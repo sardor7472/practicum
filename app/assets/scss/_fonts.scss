@@ -1,0 +1,22 @@
+@mixin importFont ($font, $weight, $path) {
+  @font-face {
+    font-family: $font;
+    font-weight: $weight;
+    src: url($path);
+  }
+};
+
+$fontBase: 'MuseoSansCyrl';
+$fontBasePath: '../fonts/';
+
+//++++++++++++++++++++++++++++++++++ | regular | ++++++++++++++++++++++++++++++++++
+@include importFont($fontBase, 300, $fontBasePath + 'MuseoSansCyrl_0.otf' ) /*regular*/
+//
+////++++++++++++++++++++++++++++++++++ | semi bold | ++++++++++++++++++++++++++++++++++
+@include importFont($fontBase, 500, $fontBasePath + 'MuseoSansCyrl_1.otf' ) /*semi bold*/
+//
+////++++++++++++++++++++++++++++++++++ | bold | ++++++++++++++++++++++++++++++++++
+@include importFont($fontBase, 700, $fontBasePath + 'MuseoSansCyrl_2.otf' ) /*bold*/
+
+////++++++++++++++++++++++++++++++++++ | extra bold | ++++++++++++++++++++++++++++++++++
+@include importFont($fontBase, 900, $fontBasePath + 'MuseoSansCyrl_3.otf' ) /*extra bold*/

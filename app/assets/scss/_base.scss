@@ -1,0 +1,224 @@
+//mixins
+@mixin fixImg($width, $height, $cover: true) {
+  @extend .fx-c;
+  img {
+    width: $width;
+    height: $height;
+    @if $cover {
+      object-fit: cover;
+    } @else {
+      object-fit: contain;
+    }
+  }
+}
+
+//select mixin
+@mixin selectMixin($height, $border-radius:0) {
+  .input-select + .select2-container--default {
+    .select2-selection--single {
+      background: #edf3f8;
+      border: none;
+      border-radius: $border-radius;
+      height: $height;
+    }
+
+    .select2-selection__rendered {
+      height: $height;
+      line-height: $height;
+      padding: 0 30px;
+    }
+
+    .select2-selection__arrow {
+      height: $height;
+      @content
+    }
+  }
+  //mixins
+}
+
+
+//++++++++
+//++++ | base | ++++
+//++++++++
+%transition, .transition {
+  transition: .25s;
+}
+
+%cur-p, .cur-p {
+  cursor: pointer;
+  //base
+}
+
+
+//++++++++
+//++++ | form | ++++
+//++++++++
+input,
+input:hover,
+input:focus,
+select:hover,
+select:focus {
+  outline: none;
+}
+textarea,
+textarea:hover,
+textarea:focus,
+select:hover,
+select:focus {
+  outline: none;
+}
+
+
+
+//++++++++
+//++++ | color | ++++
+//++++++++
+
+.wh-col {
+  color: #fff;
+  //color
+}
+
+.oth-col {
+  color: $oth-col;
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+
+//++++++++
+//++++ | display | ++++
+//++++++++
+.flex-50 {
+  flex: 1 1 50%;
+}
+
+.flex-33 {
+  flex: 0 0 percentage(1/3);
+}
+
+.d-f {
+  display: flex;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.d-ib {
+  display: inline-block;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.ifx-c {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.d-inline {
+  display: inline !important;
+}
+.ov-h {
+  overflow: hidden;
+}
+
+%fx-c, .fx-c {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //display
+}
+
+
+//++++++++
+//++++ | position | ++++
+//++++++++
+%pos-a, .pos-a {
+  position: absolute;
+}
+
+%pos-r, .pos-r {
+  position: relative;
+  //position
+}
+
+
+//++++++++
+//++++ | text | ++++
+//++++++++
+%f-semi, .f-semi {
+  font-weight: 600;
+}
+
+.f-medium {
+  font-weight: 500;
+}
+
+%f-bold, .f-bold {
+  font-weight: 700;
+}
+
+%f-black, .f-black {
+  font-weight: 900;
+}
+
+.f-upper {
+  font-size: 1.22rem;
+}
+
+%text-upper, .text-upper {
+  text-transform: uppercase;
+  //text
+}
+
+
+//++++++++
+//++++ | spacing | ++++
+//++++++++
+.no-margin {
+  margin: 0 !important;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.regular-line-height {
+  line-height: 1.8rem;
+}
+
+.line-height-2 {
+  line-height: 2rem;
+}
+
+@mixin spaceCreator($space, $directions) {
+  $nums: 1, 2, 3, 4;
+  @each $name, $direction in $directions {
+    @each $num in $nums {
+      .#{$name}-#{$num} {
+        #{$space}-#{$direction}: #{$num}rem;
+      }
+    }
+  }
+}
+
+$margin-directions: (
+        "ml": "left", "mr": "right", "mb": "bottom", "mt": "top"
+);
+$padding-directions: (
+        "pl": "left", "pr": "right", "pb": "bottom", "pt": "top"
+);
+
+
+@include spaceCreator(margin, $margin-directions);
+@include spaceCreator(padding, $padding-directions)
+
+
+
+
